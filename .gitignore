@@ -2,6 +2,7 @@
 
 #env variable
 .env
+.env.development.local
 
 # Compiled output
 /dist
@@ -48,3 +49,4 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
+.vercel

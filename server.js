@@ -1,7 +1,7 @@
-const express = require("express");
-const mysql = require("mysql2");
-const bodyParser = require("body-parser");
-require("dotenv").config();
+import express from "express";
+import mysql from "mysql2";
+import bodyParser from "body-parser";
+import "dotenv/config";
 
 const app = express();
 
