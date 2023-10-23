@@ -21,6 +21,8 @@ export class AppComponent {
   }
 
   saveFavPlant() {
+    console.log(this.userName + "'s favorite plant is a " + this.favPlant);
+
     this.apiService.submitFavPlant(this.userName, this.favPlant);
   }
 }

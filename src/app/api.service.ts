@@ -22,14 +22,14 @@ export class ApiService {
 
   submitFavPlant(email:string, plant:string) {
     const data = { email, plant };
+    const url = '/api/add-plant?email=' + email + '&favPlant=' + plant;
 
-    this.http.post('/api/add-plant', data)
-      .pipe(
-        tap({
-          next: () => console.log('Plant data added successfully!'),
-          error: error => console.error('Error adding plant data:', error)
-        })
-      )
-      .subscribe();
+    axios.post(url)
+    .then(() => {
+      console.log("Successfully saved data!");
+    })
+    .catch(error => {
+      console.error("ERROR:", error);
+    });
   }
 }
