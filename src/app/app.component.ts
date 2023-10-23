@@ -21,14 +21,6 @@ export class AppComponent {
   }
 
   saveFavPlant() {
-    console.log(this.userName + "'s favorite plant is a " + this.favPlant);
-
-    this.apiService.submitFavPlant(this.userName, this.favPlant)
-      .then(() => {
-        console.log("Favorite plant saved successfully!");
-      })
-      .catch(error => {
-        console.error("Error submitting data:", error);
-      });
+    this.apiService.submitFavPlant(this.userName, this.favPlant);
   }
 }

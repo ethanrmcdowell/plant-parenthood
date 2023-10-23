@@ -7,7 +7,7 @@ export default async function handler(
 ) {
   try {
     const result =
-      await sql`CREATE TABLE plant_users (fName varchar(45), favPlant varchar(45));`;
+      await sql`CREATE TABLE plant_users (email varchar(45), favPlant varchar(45));`;
     return response.status(200).json({ result });
   } catch (error) {
     return response.status(500).json({ error });
