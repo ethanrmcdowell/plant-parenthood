@@ -8,6 +8,8 @@ export default async function handler(
   try {
     const email = request.query['email'] as string;
     const favPlant = request.query['favPlant'] as string;
+    console.log("EMAIL:", email);
+    console.log("FAV PLANT:", favPlant);
     if (!email || !favPlant) throw new Error('Email and plant type required!');
     await sql`INSERT INTO plant_users (email, favPlant) VALUES (${email}, ${favPlant});`;
   } catch (error) {
